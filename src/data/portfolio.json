@@ -41,48 +41,12 @@
   },
   "experience": [
     {
-      "company": "Nexora Labs",
+      "company": "HCLTech",
       "role": "Software Engineer",
-      "duration": "MAY 2022 - OCTOBER 2024",
-      "responsibilities": [
-        "Lead engineering for a multi-tenant SaaS platform serving 50k+ users.",
-        "Designed event-driven microservices on AWS with sub-100ms p95 latency.",
-        "Mentor a team of 5 engineers and drive code-quality standards."
-      ],
-      "achievements": [
-        "Cut infrastructure cost 38% through architectural redesign.",
-        "Shipped a redesign that lifted activation by 27%."
-      ],
-      "stack": ["React", "Next.js", "Node.js", "PostgreSQL", "AWS"]
-    },
-    {
-      "company": "Hyperloop Fintech",
-      "role": "Full Stack Developer",
-      "duration": "2021 — 2023",
-      "responsibilities": [
-        "Built core payment flows handling millions in monthly volume.",
-        "Owned the public API used by 200+ B2B integrations.",
-        "Implemented CI/CD pipelines and observability stack."
-      ],
-      "achievements": [
-        "Reduced checkout drop-off by 19%.",
-        "Achieved 99.99% uptime over 18 months."
-      ],
-      "stack": ["TypeScript", "Node.js", "MongoDB", "Docker"]
-    },
-    {
-      "company": "Freelance & Open Source",
-      "role": "Software Engineer",
-      "duration": "2020 — 2021",
-      "responsibilities": [
-        "Delivered web platforms for startups across 3 continents.",
-        "Contributed to several open-source TypeScript libraries."
-      ],
-      "achievements": [
-        "Shipped 15+ production projects from scratch.",
-        "Earned a top-1% rating on the freelance marketplace."
-      ],
-      "stack": ["React", "Express", "MySQL"]
+      "duration": "MAY 2022 - OCTOBER 2026",
+      "responsibilities": [],
+      "achievements": [],
+      "stack": []
     }
   ],
   "projects": [
