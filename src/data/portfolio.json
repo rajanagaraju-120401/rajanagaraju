@@ -1,0 +1,189 @@
+{
+  "name": "Raja Nagaraju",
+  "title": "Software Engineer | Full Stack Developer",
+  "summary": "I design and develop scalable, high-performance web applications with exceptional user experiences. Passionate about building innovative solutions using modern technologies.",
+  "typing": [
+    "Building Scalable Web Applications",
+    "Creating Modern Digital Experiences",
+    "Full Stack Problem Solver",
+    "Turning Ideas Into Products"
+  ],
+  "social": {
+    "github": "https://github.com/rajanagaraju",
+    "linkedin": "https://linkedin.com/in/rajanagaraju",
+    "twitter": "https://twitter.com/rajanagaraju",
+    "email": "raja.nagaraju@example.com"
+  },
+  "about": {
+    "paragraphs": [
+      "I'm a software engineer with a relentless curiosity for how things work — and an even deeper drive to make them work better. Over the past several years I've shipped products that serve thousands of users across fintech, SaaS, and consumer platforms.",
+      "My journey started with a single HTML file and a question: 'how does this end up on a screen?' That question turned into a career spanning the full stack — from pixel-perfect interfaces to distributed backends and the cloud infrastructure beneath them.",
+      "I believe great engineering is part craft, part empathy. I obsess over user experience, write code that's a joy for the next engineer to read, and never stop learning."
+    ],
+    "highlights": [
+      { "title": "Full Stack Development", "desc": "End-to-end product engineering from interface to infrastructure." },
+      { "title": "System Design", "desc": "Architecting scalable, resilient systems that grow with the product." },
+      { "title": "API Development", "desc": "Clean, performant REST & GraphQL APIs built to last." },
+      { "title": "Cloud Solutions", "desc": "Deploying and scaling on AWS with modern DevOps practices." }
+    ],
+    "stats": [
+      { "label": "Years of Experience", "value": 5 },
+      { "label": "Projects Completed", "value": 60 },
+      { "label": "Technologies Mastered", "value": 25 },
+      { "label": "Happy Clients", "value": 30 }
+    ]
+  },
+  "skills": {
+    "Frontend": ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
+    "Backend": ["Node.js", "Express.js", "Python", "Java"],
+    "Database": ["PostgreSQL", "MySQL", "MongoDB"],
+    "Cloud & DevOps": ["AWS", "Docker", "CI/CD", "GitHub Actions"],
+    "Tools": ["Git", "GitHub", "Postman", "VS Code", "Figma"]
+  },
+  "experience": [
+    {
+      "company": "Nexora Labs",
+      "role": "Senior Full Stack Engineer",
+      "duration": "2023 — Present",
+      "responsibilities": [
+        "Lead engineering for a multi-tenant SaaS platform serving 50k+ users.",
+        "Designed event-driven microservices on AWS with sub-100ms p95 latency.",
+        "Mentor a team of 5 engineers and drive code-quality standards."
+      ],
+      "achievements": [
+        "Cut infrastructure cost 38% through architectural redesign.",
+        "Shipped a redesign that lifted activation by 27%."
+      ],
+      "stack": ["React", "Next.js", "Node.js", "PostgreSQL", "AWS"]
+    },
+    {
+      "company": "Hyperloop Fintech",
+      "role": "Full Stack Developer",
+      "duration": "2021 — 2023",
+      "responsibilities": [
+        "Built core payment flows handling millions in monthly volume.",
+        "Owned the public API used by 200+ B2B integrations.",
+        "Implemented CI/CD pipelines and observability stack."
+      ],
+      "achievements": [
+        "Reduced checkout drop-off by 19%.",
+        "Achieved 99.99% uptime over 18 months."
+      ],
+      "stack": ["TypeScript", "Node.js", "MongoDB", "Docker"]
+    },
+    {
+      "company": "Freelance & Open Source",
+      "role": "Software Engineer",
+      "duration": "2020 — 2021",
+      "responsibilities": [
+        "Delivered web platforms for startups across 3 continents.",
+        "Contributed to several open-source TypeScript libraries."
+      ],
+      "achievements": [
+        "Shipped 15+ production projects from scratch.",
+        "Earned a top-1% rating on the freelance marketplace."
+      ],
+      "stack": ["React", "Express", "MySQL"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Lumen Analytics",
+      "description": "Real-time analytics dashboard with sub-second queries over billions of events.",
+      "category": "Full Stack",
+      "stack": ["Next.js", "TypeScript", "ClickHouse", "AWS"],
+      "features": ["Realtime streaming", "Custom SQL editor", "Multi-tenant"],
+      "challenge": "Sustained 10k events/sec ingestion with predictable query latency.",
+      "metrics": { "Performance": "+62% faster queries", "Users": "8k DAU", "Impact": "$1.2M ARR" },
+      "github": "#",
+      "demo": "#",
+      "image": "lumen"
+    },
+    {
+      "name": "Orbit Commerce",
+      "description": "Headless commerce platform with edge-rendered storefronts and modular checkout.",
+      "category": "Full Stack",
+      "stack": ["React", "Node.js", "PostgreSQL", "Stripe"],
+      "features": ["Edge SSR", "Plugin system", "A/B testing built-in"],
+      "challenge": "Cold-start latency under 50ms across 12 global regions.",
+      "metrics": { "Performance": "98 Lighthouse", "Users": "30+ merchants", "Impact": "+27% conversion" },
+      "github": "#",
+      "demo": "#",
+      "image": "orbit"
+    },
+    {
+      "name": "Pulse API",
+      "description": "High-throughput REST + GraphQL API with built-in rate limiting and observability.",
+      "category": "APIs",
+      "stack": ["Node.js", "GraphQL", "Redis", "Docker"],
+      "features": ["Schema-first", "Auto-docs", "Distributed cache"],
+      "challenge": "Handle 50k RPS without breaking the bank.",
+      "metrics": { "Performance": "22ms p95", "Users": "200+ clients", "Impact": "-41% infra cost" },
+      "github": "#",
+      "demo": "#",
+      "image": "pulse"
+    },
+    {
+      "name": "Nimbus DB",
+      "description": "Lightweight time-series database engine built in Rust with a Node.js client.",
+      "category": "Open Source",
+      "stack": ["Rust", "Node.js", "WASM"],
+      "features": ["Append-only log", "Columnar storage", "Open source"],
+      "challenge": "Single-binary deploy with embeddable client.",
+      "metrics": { "Performance": "1M writes/sec", "Users": "1.4k stars", "Impact": "Top trending" },
+      "github": "#",
+      "demo": "#",
+      "image": "nimbus"
+    },
+    {
+      "name": "Atlas Studio",
+      "description": "Collaborative design tool with realtime multiplayer cursors and CRDT-backed canvas.",
+      "category": "Frontend",
+      "stack": ["React", "TypeScript", "WebSockets"],
+      "features": ["Multiplayer", "Vector engine", "Plugin SDK"],
+      "challenge": "Smooth 60fps canvas with 50+ concurrent editors.",
+      "metrics": { "Performance": "60fps stable", "Users": "12k creators", "Impact": "4.9★ reviews" },
+      "github": "#",
+      "demo": "#",
+      "image": "atlas"
+    },
+    {
+      "name": "Vault Auth",
+      "description": "Drop-in authentication service with passkeys, OAuth, and audit logs.",
+      "category": "Backend",
+      "stack": ["Node.js", "PostgreSQL", "JWT"],
+      "features": ["Passkeys", "SSO", "SOC2-ready audit"],
+      "challenge": "Zero-downtime key rotation across regions.",
+      "metrics": { "Performance": "100% uptime", "Users": "80+ teams", "Impact": "SOC2 ready" },
+      "github": "#",
+      "demo": "#",
+      "image": "vault"
+    }
+  ],
+  "services": [
+    { "title": "Full Stack Web Development", "desc": "End-to-end product engineering, from idea to launch.", "icon": "Layers" },
+    { "title": "Frontend Development", "desc": "Beautiful, accessible, performance-obsessed interfaces.", "icon": "Monitor" },
+    { "title": "Backend Development", "desc": "Robust services and clean domain models that scale.", "icon": "Server" },
+    { "title": "API Development", "desc": "REST & GraphQL APIs designed for developers to love.", "icon": "Plug" },
+    { "title": "Database Design", "desc": "Schemas that stay performant as your data grows.", "icon": "Database" },
+    { "title": "Technical Consulting", "desc": "Architecture reviews, hiring help, and roadmap planning.", "icon": "Compass" }
+  ],
+  "certifications": [
+    { "title": "AWS Certified Solutions Architect", "issuer": "Amazon Web Services", "year": "2024" },
+    { "title": "Meta Front-End Developer", "issuer": "Meta", "year": "2023" },
+    { "title": "MongoDB Associate Developer", "issuer": "MongoDB", "year": "2023" },
+    { "title": "Google Cloud Associate Engineer", "issuer": "Google", "year": "2022" },
+    { "title": "Hackathon Winner — FinTech Summit", "issuer": "FinTech Summit", "year": "2022" },
+    { "title": "Top 1% Engineer", "issuer": "Toptal", "year": "2021" }
+  ],
+  "testimonials": [
+    { "name": "Aarav Mehta", "role": "CTO, Nexora Labs", "feedback": "Raja is one of those rare engineers who is equally strong on architecture, product instincts, and execution. He raised the bar for our entire team.", "rating": 5 },
+    { "name": "Sofia Alvarez", "role": "Product Manager, Hyperloop", "feedback": "He doesn't just ship features — he ships polished, thoughtful experiences. Working with Raja is the easiest collaboration I've had.", "rating": 5 },
+    { "name": "Daniel Chen", "role": "Founder, Atlas Studio", "feedback": "We launched our MVP in 6 weeks because of Raja. He turned ambiguous ideas into a beautiful, production-ready product.", "rating": 5 },
+    { "name": "Priya Iyer", "role": "Engineering Manager, Orbit", "feedback": "Deeply technical, calm under pressure, and a brilliant mentor. Anyone would be lucky to have him on their team.", "rating": 5 }
+  ],
+  "contact": {
+    "email": "raja.nagaraju@example.com",
+    "location": "Bengaluru, India · Remote-friendly"
+  }
+}
