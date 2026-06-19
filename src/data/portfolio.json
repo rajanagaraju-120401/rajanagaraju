@@ -33,11 +33,11 @@
     ]
   },
   "skills": {
-    "Frontend": ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
-    "Backend": ["Node.js", "Express.js", "Python", "Java"],
+    "Frontend": ["HTML5", "CSS3", "JavaScript", "React", "Next.js", "Tailwind CSS"],
+    "Backend": ["Node.js", "Python", "Java"],
     "Database": ["PostgreSQL", "MySQL", "MongoDB"],
-    "Cloud & DevOps": ["AWS", "Docker", "CI/CD", "GitHub Actions"],
-    "Tools": ["Git", "GitHub", "VS Code", "Figma"]
+    "Cloud & DevOps": ["AWS", "Docker", "GitHub Actions"],
+    "Tools": ["Git", "GitHub", "VS Code"]
   },
   "experience": [
     {
