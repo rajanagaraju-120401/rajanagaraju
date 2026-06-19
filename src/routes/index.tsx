@@ -1,57 +1,36 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform, useInView, AnimatePresence } from "framer-motion";
-import {
-  FiGithub, FiLinkedin, FiInstagram, FiMail, FiDownload, FiArrowUpRight,
-  FiArrowUp, FiExternalLink, FiMapPin, FiSend, FiStar,
-} from "react-icons/fi";
-import {
-  HiOutlineSquare3Stack3D, HiOutlineComputerDesktop, HiOutlineServer,
-  HiOutlineCircleStack, HiOutlineGlobeAlt,
-} from "react-icons/hi2";
-import { TbPlugConnected } from "react-icons/tb";
-import portraitAsset from "@/assets/raja-photo.jpeg.asset.json";
-const portrait = portraitAsset.url;
-import dataJson from "@/data/portfolio.json";
-type AnyArr = any[];
-const data = dataJson as unknown as Omit<typeof dataJson, "projects" | "certifications" | "experience"> & {
-  projects: AnyArr;
-  certifications: AnyArr;
-  experience: AnyArr;
-  about: typeof dataJson.about & { stats: AnyArr };
-};
+import { useEffect } from "react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Raja Nagaraju — Software Engineer & Full Stack Developer" },
       { name: "description", content: "Raja Nagaraju is a software engineer and full stack developer building scalable, high-performance web applications with React, Next.js, Node.js and AWS." },
-      { name: "keywords", content: "Raja Nagaraju, Software Engineer, Full Stack Developer, React Developer, Next.js Developer, Web Developer" },
       { property: "og:title", content: "Raja Nagaraju — Software Engineer & Full Stack Developer" },
       { property: "og:description", content: "Premium portfolio of Raja Nagaraju — full stack engineer building modern digital experiences." },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
-      { name: "twitter:title", content: "Raja Nagaraju — Software Engineer" },
-      { name: "twitter:description", content: "Full stack developer building scalable web applications." },
     ],
     links: [{ rel: "canonical", href: "/" }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Person",
-          name: "Raja Nagaraju",
-          jobTitle: "Software Engineer & Full Stack Developer",
-          url: "/",
-          sameAs: [data.social.github, data.social.linkedin, data.social.instagram],
-          knowsAbout: ["React", "Next.js", "TypeScript", "Node.js", "AWS", "PostgreSQL"],
-        }),
-      },
-    ],
   }),
-  component: Portfolio,
+  component: PortfolioRedirect,
 });
+
+function PortfolioRedirect() {
+  useEffect(() => {
+    window.location.replace("/portfolio.html");
+  }, []);
+  return (
+    <div style={{
+      position: "fixed", inset: 0, background: "#050816", color: "#94A3B8",
+      display: "grid", placeItems: "center", fontFamily: "system-ui, sans-serif",
+    }}>
+      <noscript>
+        <meta httpEquiv="refresh" content="0; url=/portfolio.html" />
+        <a href="/portfolio.html" style={{ color: "#fff" }}>Open portfolio →</a>
+      </noscript>
+      Loading portfolio…
+    </div>
+  );
+}
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
