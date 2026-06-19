@@ -698,7 +698,7 @@ function Contact() {
               {[
                 { Icon: FiGithub, href: data.social.github },
                 { Icon: FiLinkedin, href: data.social.linkedin },
-                { Icon: FiTwitter, href: data.social.twitter },
+                { Icon: FiInstagram, href: data.social.instagram },
               ].map(({ Icon, href }, i) => (
                 <a key={i} href={href} className="grid h-11 w-11 place-items-center rounded-full glass-strong text-white transition hover:scale-110 hover:glow-blue">
                   <Icon />
@@ -770,7 +770,7 @@ function Footer() {
           {[
             { Icon: FiGithub, href: data.social.github },
             { Icon: FiLinkedin, href: data.social.linkedin },
-            { Icon: FiTwitter, href: data.social.twitter },
+            { Icon: FiInstagram, href: data.social.instagram },
             { Icon: FiMail, href: `mailto:${data.social.email}` },
           ].map(({ Icon, href }, i) => (
             <a key={i} href={href} className="grid h-9 w-9 place-items-center rounded-full glass text-[var(--text-muted)] hover:text-white">
