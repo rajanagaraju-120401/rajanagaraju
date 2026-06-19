@@ -38,7 +38,7 @@
     "Backend": ["Node.js", "Express.js", "Python", "Java"],
     "Database": ["PostgreSQL", "MySQL", "MongoDB"],
     "Cloud & DevOps": ["AWS", "Docker", "CI/CD", "GitHub Actions"],
-    "Tools": ["Git", "GitHub", "Postman", "VS Code", "Figma"]
+    "Tools": ["Git", "GitHub", "VS Code", "Figma"]
   },
   "experience": [
     {
