@@ -870,7 +870,6 @@ function Portfolio() {
         <Projects />
         <Services />
         <Certifications />
-        <Testimonials />
         <Contact />
       </main>
       <Footer />
