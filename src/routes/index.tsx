@@ -337,7 +337,7 @@ function Hero() {
               </span>
               <div>
                 <div className="text-xs text-[var(--text-muted)]">1.6y experience</div>
-                <div className="font-medium text-white">Senior Engineer</div>
+                <div className="font-medium text-white">Software Engineer</div>
               </div>
             </div>
           </motion.div>
