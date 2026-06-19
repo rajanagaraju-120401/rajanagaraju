@@ -12,7 +12,14 @@ import {
 import { TbPlugConnected } from "react-icons/tb";
 import portrait from "@/assets/raja-portrait.jpg";
 import dataJson from "@/data/portfolio.json";
-const data = dataJson as any;
+type AnyArr = any[];
+const data = dataJson as Omit<typeof dataJson, "projects" | "certifications" | "experience" | "testimonials"> & {
+  projects: AnyArr;
+  certifications: AnyArr;
+  experience: AnyArr;
+  testimonials: AnyArr;
+  about: typeof dataJson.about & { stats: AnyArr };
+};
 
 export const Route = createFileRoute("/")({
   head: () => ({
