@@ -82,6 +82,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Raja Nagaraju" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#050816" },
+      { title: "Raja Nagaraju" },
+      { property: "og:title", content: "Raja Nagaraju" },
+      { name: "twitter:title", content: "Raja Nagaraju" },
+      { name: "description", content: "A premium, futuristic personal portfolio website for Raja Nagaraju, a Software Engineer and Full Stack Developer." },
+      { property: "og:description", content: "A premium, futuristic personal portfolio website for Raja Nagaraju, a Software Engineer and Full Stack Developer." },
+      { name: "twitter:description", content: "A premium, futuristic personal portfolio website for Raja Nagaraju, a Software Engineer and Full Stack Developer." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/6OoZckyuUYT9qZCUAsR2lzWYPsw2/social-images/social-1781880656665-WhatsApp_Image_2026-06-18_at_10.39.29_AM.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/6OoZckyuUYT9qZCUAsR2lzWYPsw2/social-images/social-1781880656665-WhatsApp_Image_2026-06-18_at_10.39.29_AM.webp" },
     ],
     links: [
       {
