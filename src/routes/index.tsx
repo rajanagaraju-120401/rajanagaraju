@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform, useInView, AnimatePresence } from "framer-motion";
 import {
-  FiGithub, FiLinkedin, FiTwitter, FiMail, FiDownload, FiArrowUpRight,
+  FiGithub, FiLinkedin, FiInstagram, FiMail, FiDownload, FiArrowUpRight,
   FiArrowUp, FiExternalLink, FiMapPin, FiSend, FiStar,
 } from "react-icons/fi";
 import {
@@ -44,7 +44,7 @@ export const Route = createFileRoute("/")({
           name: "Raja Nagaraju",
           jobTitle: "Software Engineer & Full Stack Developer",
           url: "/",
-          sameAs: [data.social.github, data.social.linkedin, data.social.twitter],
+          sameAs: [data.social.github, data.social.linkedin, data.social.instagram],
           knowsAbout: ["React", "Next.js", "TypeScript", "Node.js", "AWS", "PostgreSQL"],
         }),
       },
@@ -302,7 +302,7 @@ function Hero() {
             {[
               { Icon: FiGithub, href: data.social.github },
               { Icon: FiLinkedin, href: data.social.linkedin },
-              { Icon: FiTwitter, href: data.social.twitter },
+              { Icon: FiInstagram, href: data.social.instagram },
               { Icon: FiMail, href: `mailto:${data.social.email}` },
             ].map(({ Icon, href }, idx) => (
               <a key={idx} href={href} aria-label="social"
