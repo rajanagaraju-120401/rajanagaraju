@@ -659,54 +659,6 @@ function Certifications() {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Testimonials                                                       */
-/* ------------------------------------------------------------------ */
-
-function Testimonials() {
-  const [idx, setIdx] = useState(0);
-  useEffect(() => {
-    const t = setInterval(() => setIdx((i) => (i + 1) % data.testimonials.length), 5500);
-    return () => clearInterval(t);
-  }, []);
-  const t = data.testimonials[idx];
-  return (
-    <Section id="testimonials">
-      <SectionHeading eyebrow="Testimonials" title="Kind Words from People I've Built With" />
-      <div className="relative mx-auto max-w-3xl">
-        <AnimatePresence mode="wait">
-          <motion.blockquote key={idx}
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className="rounded-3xl glass-strong p-8 md:p-12">
-            <div className="mb-4 flex gap-1 text-[var(--accent-cyan)]">
-              {Array.from({ length: t.rating }).map((_, i) => <FiStar key={i} className="fill-current" />)}
-            </div>
-            <p className="font-display text-xl leading-relaxed text-white md:text-2xl">"{t.feedback}"</p>
-            <div className="mt-6 flex items-center gap-4">
-              <div className="grid h-12 w-12 place-items-center rounded-full font-semibold text-white"
-                style={{ background: "var(--gradient-brand)" }}>
-                {t.name.split(" ").map((n) => n[0]).join("")}
-              </div>
-              <div>
-                <div className="font-medium text-white">{t.name}</div>
-                <div className="text-sm text-[var(--text-muted)]">{t.role}</div>
-              </div>
-            </div>
-          </motion.blockquote>
-        </AnimatePresence>
-        <div className="mt-6 flex justify-center gap-2">
-          {data.testimonials.map((_, i) => (
-            <button key={i} onClick={() => setIdx(i)}
-              className={`h-1.5 rounded-full transition-all ${i === idx ? "w-8 bg-white" : "w-1.5 bg-white/30"}`}
-              aria-label={`Testimonial ${i + 1}`} />
-          ))}
-        </div>
-      </div>
-    </Section>
-  );
-}
-
-/* ------------------------------------------------------------------ */
 /*  Contact                                                            */
 /* ------------------------------------------------------------------ */
 
