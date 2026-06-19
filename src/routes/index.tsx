@@ -11,7 +11,15 @@ import {
 } from "react-icons/hi2";
 import { TbPlugConnected } from "react-icons/tb";
 import portrait from "@/assets/raja-portrait.jpg";
-import data from "@/data/portfolio.json";
+import dataJson from "@/data/portfolio.json";
+type AnyArr = any[];
+const data = dataJson as Omit<typeof dataJson, "projects" | "certifications" | "experience" | "testimonials"> & {
+  projects: AnyArr;
+  certifications: AnyArr;
+  experience: AnyArr;
+  testimonials: AnyArr;
+  about: typeof dataJson.about & { stats: AnyArr };
+};
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -391,7 +399,7 @@ function About() {
             viewport={{ once: true }} transition={{ delay: i * 0.08 }}
             className="rounded-2xl glass p-6 text-center">
             <div className="font-display text-4xl font-semibold text-gradient md:text-5xl">
-              <CountUp to={s.value} />
+              <CountUp to={Number(s.value) || 0} />
             </div>
             <div className="mt-2 text-xs uppercase tracking-wider text-[var(--text-muted)]">{s.label}</div>
           </motion.div>
@@ -474,18 +482,18 @@ function Experience() {
               <div className={`pl-12 md:pl-0 ${i % 2 ? "md:pr-12" : "md:pl-12"}`}>
                 <div className="rounded-2xl glass p-5">
                   <ul className="space-y-2 text-sm text-[var(--text-muted)]">
-                    {exp.responsibilities.map((r, ri) => (
+                    {exp.responsibilities.map((r: string, ri: number) => (
                       <li key={ri} className="flex gap-2"><span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--accent-blue)]" />{r}</li>
                     ))}
                   </ul>
                   <div className="mt-4 border-t border-white/5 pt-4">
                     <div className="text-xs uppercase tracking-wider text-[var(--accent-cyan)]">Wins</div>
                     <ul className="mt-2 space-y-1 text-sm text-white/90">
-                      {exp.achievements.map((a, ai) => <li key={ai}>↗ {a}</li>)}
+                      {exp.achievements.map((a: string, ai: number) => <li key={ai}>↗ {a}</li>)}
                     </ul>
                   </div>
                   <div className="mt-4 flex flex-wrap gap-1.5">
-                    {exp.stack.map((s) => (
+                    {exp.stack.map((s: string) => (
                       <span key={s} className="rounded-md bg-white/5 px-2 py-0.5 text-xs text-white/70">{s}</span>
                     ))}
                   </div>
@@ -566,12 +574,12 @@ function Projects() {
                 {Object.entries(p.metrics).map(([k, v]) => (
                   <div key={k}>
                     <div className="text-[10px] uppercase tracking-wider text-[var(--text-muted)]">{k}</div>
-                    <div className="text-xs font-medium text-white">{v}</div>
+                    <div className="text-xs font-medium text-white">{String(v)}</div>
                   </div>
                 ))}
               </div>
               <div className="mt-4 flex flex-wrap gap-1.5">
-                {p.stack.map((s) => <span key={s} className="rounded-md bg-white/5 px-2 py-0.5 text-xs text-white/70">{s}</span>)}
+                {p.stack.map((s: string) => <span key={s} className="rounded-md bg-white/5 px-2 py-0.5 text-xs text-white/70">{s}</span>)}
               </div>
               <div className="mt-5 flex items-center gap-3">
                 <a href={p.github} className="inline-flex items-center gap-1.5 text-sm text-white hover:text-[var(--accent-blue)]"><FiGithub /> Code</a>
@@ -645,54 +653,6 @@ function Certifications() {
             <p className="mt-1 text-sm text-[var(--text-muted)]">{c.issuer}</p>
           </motion.div>
         ))}
-      </div>
-    </Section>
-  );
-}
-
-/* ------------------------------------------------------------------ */
-/*  Testimonials                                                       */
-/* ------------------------------------------------------------------ */
-
-function Testimonials() {
-  const [idx, setIdx] = useState(0);
-  useEffect(() => {
-    const t = setInterval(() => setIdx((i) => (i + 1) % data.testimonials.length), 5500);
-    return () => clearInterval(t);
-  }, []);
-  const t = data.testimonials[idx];
-  return (
-    <Section id="testimonials">
-      <SectionHeading eyebrow="Testimonials" title="Kind Words from People I've Built With" />
-      <div className="relative mx-auto max-w-3xl">
-        <AnimatePresence mode="wait">
-          <motion.blockquote key={idx}
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className="rounded-3xl glass-strong p-8 md:p-12">
-            <div className="mb-4 flex gap-1 text-[var(--accent-cyan)]">
-              {Array.from({ length: t.rating }).map((_, i) => <FiStar key={i} className="fill-current" />)}
-            </div>
-            <p className="font-display text-xl leading-relaxed text-white md:text-2xl">"{t.feedback}"</p>
-            <div className="mt-6 flex items-center gap-4">
-              <div className="grid h-12 w-12 place-items-center rounded-full font-semibold text-white"
-                style={{ background: "var(--gradient-brand)" }}>
-                {t.name.split(" ").map((n) => n[0]).join("")}
-              </div>
-              <div>
-                <div className="font-medium text-white">{t.name}</div>
-                <div className="text-sm text-[var(--text-muted)]">{t.role}</div>
-              </div>
-            </div>
-          </motion.blockquote>
-        </AnimatePresence>
-        <div className="mt-6 flex justify-center gap-2">
-          {data.testimonials.map((_, i) => (
-            <button key={i} onClick={() => setIdx(i)}
-              className={`h-1.5 rounded-full transition-all ${i === idx ? "w-8 bg-white" : "w-1.5 bg-white/30"}`}
-              aria-label={`Testimonial ${i + 1}`} />
-          ))}
-        </div>
       </div>
     </Section>
   );
@@ -870,7 +830,6 @@ function Portfolio() {
         <Projects />
         <Services />
         <Certifications />
-        <Testimonials />
         <Contact />
       </main>
       <Footer />

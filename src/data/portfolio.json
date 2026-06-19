@@ -59,12 +59,6 @@
     { "title": "Technical Consulting", "desc": "Architecture reviews, hiring help, and roadmap planning.", "icon": "Compass" }
   ],
   "certifications": [],
-  "testimonials": [
-    { "name": "Aarav Mehta", "role": "CTO, Nexora Labs", "feedback": "Raja is one of those rare engineers who is equally strong on architecture, product instincts, and execution. He raised the bar for our entire team.", "rating": 5 },
-    { "name": "Sofia Alvarez", "role": "Product Manager, Hyperloop", "feedback": "He doesn't just ship features — he ships polished, thoughtful experiences. Working with Raja is the easiest collaboration I've had.", "rating": 5 },
-    { "name": "Daniel Chen", "role": "Founder, Atlas Studio", "feedback": "We launched our MVP in 6 weeks because of Raja. He turned ambiguous ideas into a beautiful, production-ready product.", "rating": 5 },
-    { "name": "Priya Iyer", "role": "Engineering Manager, Orbit", "feedback": "Deeply technical, calm under pressure, and a brilliant mentor. Anyone would be lucky to have him on their team.", "rating": 5 }
-  ],
   "contact": {
     "email": "raja.nagaraju@example.com",
     "location": "Bengaluru, India · Remote-friendly"
