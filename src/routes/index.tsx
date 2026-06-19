@@ -10,7 +10,8 @@ import {
   HiOutlineCircleStack, HiOutlineGlobeAlt,
 } from "react-icons/hi2";
 import { TbPlugConnected } from "react-icons/tb";
-import portrait from "@/assets/raja-portrait.jpg";
+import portraitAsset from "@/assets/raja-photo.jpeg.asset.json";
+const portrait = portraitAsset.url;
 import dataJson from "@/data/portfolio.json";
 type AnyArr = any[];
 const data = dataJson as unknown as Omit<typeof dataJson, "projects" | "certifications" | "experience"> & {
@@ -326,7 +327,7 @@ function Hero() {
           <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 5, repeat: Infinity }}
             className="absolute -left-6 top-10 hidden rounded-2xl glass-strong px-4 py-3 text-sm shadow-xl md:block">
             <div className="text-xs text-[var(--text-muted)]">Currently</div>
-            <div className="font-medium text-white">Shipping at Nexora</div>
+            <div className="font-medium text-white">@HCLTech</div>
           </motion.div>
           <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 5, repeat: Infinity, delay: 1 }}
             className="absolute -right-4 bottom-12 hidden rounded-2xl glass-strong px-4 py-3 text-sm shadow-xl md:block">
@@ -335,7 +336,7 @@ function Hero() {
                 <FiStar />
               </span>
               <div>
-                <div className="text-xs text-[var(--text-muted)]">5y experience</div>
+                <div className="text-xs text-[var(--text-muted)]">1.6y experience</div>
                 <div className="font-medium text-white">Senior Engineer</div>
               </div>
             </div>
