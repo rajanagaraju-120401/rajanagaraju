@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform, useInView, AnimatePresence } from "framer-motion";
 import {
-  FiGithub, FiLinkedin, FiTwitter, FiMail, FiDownload, FiArrowUpRight,
+  FiGithub, FiLinkedin, FiInstagram, FiMail, FiDownload, FiArrowUpRight,
   FiArrowUp, FiExternalLink, FiMapPin, FiSend, FiStar,
 } from "react-icons/fi";
 import {
@@ -13,11 +13,10 @@ import { TbPlugConnected } from "react-icons/tb";
 import portrait from "@/assets/raja-portrait.jpg";
 import dataJson from "@/data/portfolio.json";
 type AnyArr = any[];
-const data = dataJson as Omit<typeof dataJson, "projects" | "certifications" | "experience" | "testimonials"> & {
+const data = dataJson as unknown as Omit<typeof dataJson, "projects" | "certifications" | "experience"> & {
   projects: AnyArr;
   certifications: AnyArr;
   experience: AnyArr;
-  testimonials: AnyArr;
   about: typeof dataJson.about & { stats: AnyArr };
 };
 
@@ -44,7 +43,7 @@ export const Route = createFileRoute("/")({
           name: "Raja Nagaraju",
           jobTitle: "Software Engineer & Full Stack Developer",
           url: "/",
-          sameAs: [data.social.github, data.social.linkedin, data.social.twitter],
+          sameAs: [data.social.github, data.social.linkedin, data.social.instagram],
           knowsAbout: ["React", "Next.js", "TypeScript", "Node.js", "AWS", "PostgreSQL"],
         }),
       },
@@ -302,7 +301,7 @@ function Hero() {
             {[
               { Icon: FiGithub, href: data.social.github },
               { Icon: FiLinkedin, href: data.social.linkedin },
-              { Icon: FiTwitter, href: data.social.twitter },
+              { Icon: FiInstagram, href: data.social.instagram },
               { Icon: FiMail, href: `mailto:${data.social.email}` },
             ].map(({ Icon, href }, idx) => (
               <a key={idx} href={href} aria-label="social"
@@ -698,7 +697,7 @@ function Contact() {
               {[
                 { Icon: FiGithub, href: data.social.github },
                 { Icon: FiLinkedin, href: data.social.linkedin },
-                { Icon: FiTwitter, href: data.social.twitter },
+                { Icon: FiInstagram, href: data.social.instagram },
               ].map(({ Icon, href }, i) => (
                 <a key={i} href={href} className="grid h-11 w-11 place-items-center rounded-full glass-strong text-white transition hover:scale-110 hover:glow-blue">
                   <Icon />
@@ -770,7 +769,7 @@ function Footer() {
           {[
             { Icon: FiGithub, href: data.social.github },
             { Icon: FiLinkedin, href: data.social.linkedin },
-            { Icon: FiTwitter, href: data.social.twitter },
+            { Icon: FiInstagram, href: data.social.instagram },
             { Icon: FiMail, href: `mailto:${data.social.email}` },
           ].map(({ Icon, href }, i) => (
             <a key={i} href={href} className="grid h-9 w-9 place-items-center rounded-full glass text-[var(--text-muted)] hover:text-white">
