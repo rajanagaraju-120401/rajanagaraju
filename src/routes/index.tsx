@@ -13,11 +13,10 @@ import { TbPlugConnected } from "react-icons/tb";
 import portrait from "@/assets/raja-portrait.jpg";
 import dataJson from "@/data/portfolio.json";
 type AnyArr = any[];
-const data = dataJson as Omit<typeof dataJson, "projects" | "certifications" | "experience" | "testimonials"> & {
+const data = dataJson as unknown as Omit<typeof dataJson, "projects" | "certifications" | "experience"> & {
   projects: AnyArr;
   certifications: AnyArr;
   experience: AnyArr;
-  testimonials: AnyArr;
   about: typeof dataJson.about & { stats: AnyArr };
 };
 
