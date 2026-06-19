@@ -11,7 +11,8 @@ import {
 } from "react-icons/hi2";
 import { TbPlugConnected } from "react-icons/tb";
 import portrait from "@/assets/raja-portrait.jpg";
-import data from "@/data/portfolio.json";
+import dataJson from "@/data/portfolio.json";
+const data = dataJson as any;
 
 export const Route = createFileRoute("/")({
   head: () => ({
