@@ -324,11 +324,6 @@ function Hero() {
             <div className="pointer-events-none absolute inset-2 rounded-[1.7rem] ring-1 ring-white/10" />
           </motion.div>
           {/* floating badges */}
-          <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 5, repeat: Infinity }}
-            className="absolute -left-6 top-10 hidden rounded-2xl glass-strong px-4 py-3 text-sm shadow-xl md:block">
-            <div className="text-xs text-[var(--text-muted)]">Currently</div>
-            <div className="font-medium text-white">@HCLTech</div>
-          </motion.div>
           <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 5, repeat: Infinity, delay: 1 }}
             className="absolute -right-4 bottom-12 hidden rounded-2xl glass-strong px-4 py-3 text-sm shadow-xl md:block">
             <div className="flex items-center gap-2">
