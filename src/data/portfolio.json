@@ -58,14 +58,7 @@
     { "title": "Database Design", "desc": "Schemas that stay performant as your data grows.", "icon": "Database" },
     { "title": "Technical Consulting", "desc": "Architecture reviews, hiring help, and roadmap planning.", "icon": "Compass" }
   ],
-  "certifications": [
-    { "title": "AWS Certified Solutions Architect", "issuer": "Amazon Web Services", "year": "2024" },
-    { "title": "Meta Front-End Developer", "issuer": "Meta", "year": "2023" },
-    { "title": "MongoDB Associate Developer", "issuer": "MongoDB", "year": "2023" },
-    { "title": "Google Cloud Associate Engineer", "issuer": "Google", "year": "2022" },
-    { "title": "Hackathon Winner — FinTech Summit", "issuer": "FinTech Summit", "year": "2022" },
-    { "title": "Top 1% Engineer", "issuer": "Toptal", "year": "2021" }
-  ],
+  "certifications": [],
   "testimonials": [
     { "name": "Aarav Mehta", "role": "CTO, Nexora Labs", "feedback": "Raja is one of those rare engineers who is equally strong on architecture, product instincts, and execution. He raised the bar for our entire team.", "rating": 5 },
     { "name": "Sofia Alvarez", "role": "Product Manager, Hyperloop", "feedback": "He doesn't just ship features — he ships polished, thoughtful experiences. Working with Raja is the easiest collaboration I've had.", "rating": 5 },
