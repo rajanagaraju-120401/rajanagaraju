@@ -7,7 +7,7 @@ import {
 } from "react-icons/fi";
 import {
   HiOutlineSquare3Stack3D, HiOutlineComputerDesktop, HiOutlineServer,
-  HiOutlineCircleStack, HiOutlineCompass,
+  HiOutlineCircleStack, HiOutlineGlobeAlt,
 } from "react-icons/hi2";
 import { TbPlugConnected } from "react-icons/tb";
 import portrait from "@/assets/raja-portrait.jpg";
@@ -595,7 +595,7 @@ const serviceIcons: Record<string, React.ComponentType<{ className?: string }>> 
   Server: HiOutlineServer,
   Plug: TbPlugConnected,
   Database: HiOutlineCircleStack,
-  Compass: HiOutlineCompass,
+  Compass: HiOutlineGlobeAlt,
 };
 
 function Services() {
