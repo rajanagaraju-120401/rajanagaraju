@@ -367,7 +367,7 @@ function CountUp({ to }: { to: number }) {
 function About() {
   return (
     <Section id="about">
-      <SectionHeading eyebrow="About" title="About Raja" subtitle="Engineering with craft, empathy, and a relentless bias for shipping." />
+      <SectionHeading eyebrow="About" title="Who I Am" subtitle="Engineering with craft, empathy, and a relentless bias for shipping." />
       <div className="grid gap-10 md:grid-cols-[1fr_1fr]">
         <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} className="space-y-5">
           {data.about.paragraphs.map((p, i) => (
