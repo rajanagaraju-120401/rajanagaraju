@@ -399,7 +399,7 @@ function About() {
             viewport={{ once: true }} transition={{ delay: i * 0.08 }}
             className="rounded-2xl glass p-6 text-center">
             <div className="font-display text-4xl font-semibold text-gradient md:text-5xl">
-              <CountUp to={s.value} />
+              <CountUp to={Number(s.value) || 0} />
             </div>
             <div className="mt-2 text-xs uppercase tracking-wider text-[var(--text-muted)]">{s.label}</div>
           </motion.div>
@@ -482,18 +482,18 @@ function Experience() {
               <div className={`pl-12 md:pl-0 ${i % 2 ? "md:pr-12" : "md:pl-12"}`}>
                 <div className="rounded-2xl glass p-5">
                   <ul className="space-y-2 text-sm text-[var(--text-muted)]">
-                    {exp.responsibilities.map((r, ri) => (
+                    {exp.responsibilities.map((r: string, ri: number) => (
                       <li key={ri} className="flex gap-2"><span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--accent-blue)]" />{r}</li>
                     ))}
                   </ul>
                   <div className="mt-4 border-t border-white/5 pt-4">
                     <div className="text-xs uppercase tracking-wider text-[var(--accent-cyan)]">Wins</div>
                     <ul className="mt-2 space-y-1 text-sm text-white/90">
-                      {exp.achievements.map((a, ai) => <li key={ai}>↗ {a}</li>)}
+                      {exp.achievements.map((a: string, ai: number) => <li key={ai}>↗ {a}</li>)}
                     </ul>
                   </div>
                   <div className="mt-4 flex flex-wrap gap-1.5">
-                    {exp.stack.map((s) => (
+                    {exp.stack.map((s: string) => (
                       <span key={s} className="rounded-md bg-white/5 px-2 py-0.5 text-xs text-white/70">{s}</span>
                     ))}
                   </div>
@@ -574,12 +574,12 @@ function Projects() {
                 {Object.entries(p.metrics).map(([k, v]) => (
                   <div key={k}>
                     <div className="text-[10px] uppercase tracking-wider text-[var(--text-muted)]">{k}</div>
-                    <div className="text-xs font-medium text-white">{v}</div>
+                    <div className="text-xs font-medium text-white">{String(v)}</div>
                   </div>
                 ))}
               </div>
               <div className="mt-4 flex flex-wrap gap-1.5">
-                {p.stack.map((s) => <span key={s} className="rounded-md bg-white/5 px-2 py-0.5 text-xs text-white/70">{s}</span>)}
+                {p.stack.map((s: string) => <span key={s} className="rounded-md bg-white/5 px-2 py-0.5 text-xs text-white/70">{s}</span>)}
               </div>
               <div className="mt-5 flex items-center gap-3">
                 <a href={p.github} className="inline-flex items-center gap-1.5 text-sm text-white hover:text-[var(--accent-blue)]"><FiGithub /> Code</a>
