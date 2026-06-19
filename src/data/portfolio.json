@@ -44,7 +44,7 @@
     {
       "company": "Nexora Labs",
       "role": "Software Engineer",
-      "duration": "2023 — Present",
+      "duration": "May 2022 — Oct 2023",
       "responsibilities": [
         "Lead engineering for a multi-tenant SaaS platform serving 50k+ users.",
         "Designed event-driven microservices on AWS with sub-100ms p95 latency.",
