@@ -29,8 +29,7 @@
     "stats": [
       { "label": "Years of Experience", "value": 5 },
       { "label": "Projects Completed", "value": 60 },
-      { "label": "Technologies Mastered", "value": 25 },
-      { "label": "Happy Clients", "value": 30 }
+      { "label": "Technologies Mastered", "value": 25 }
     ]
   },
   "skills": {
